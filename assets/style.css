@@ -12,3 +12,23 @@
 @media(max-width:980px){.wrap{width:calc(100% - 48px)}.hero{gap:32px;padding:62px 0}.hero h1{font-size:55px}.hero-board{padding:26px;min-height:400px}.hero-board h2{font-size:25px}.card-visual{height:230px;padding:25px}.card-body{padding:24px}.steps{gap:18px}.about{gap:45px}.case-body{gap:35px;grid-template-columns:140px 1fr}.case-visual{padding:25px}}
 @media(max-width:720px){.wrap{width:calc(100% - 36px)}.nav{height:72px}.brand{font-size:14px}.brand-mark{width:32px;height:32px}.menu-toggle{display:block;font-size:12px}.nav-links{display:none;position:absolute;left:0;right:0;top:72px;padding:24px 22px;background:var(--paper);border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;gap:20px}.nav-links.is-open{display:flex}.hero{grid-template-columns:1fr;padding:48px 0;gap:42px}.hero h1{font-size:clamp(45px,11vw,64px);margin-top:20px}.hero-intro{font-size:15px}.hero-board{min-height:380px;box-shadow:7px 8px 0 #e5e5d9;margin-right:7px}.hero-board h2{font-size:30px}.index-strip{flex-wrap:wrap;gap:8px 25px;font-size:9px}.section{padding:56px 0}.section-head{display:block}.section-head h2{font-size:33px}.section-head p{margin-top:18px;max-width:420px}.projects{grid-template-columns:1fr;gap:24px}.card-visual{height:260px}.card-body p{min-height:0}.approach h2{font-size:34px}.steps{grid-template-columns:1fr 1fr;gap:28px}.step h3{font-size:16px}.about{grid-template-columns:1fr;gap:25px}.about h2{font-size:33px}.about-copy p{font-size:15px}.contact-box{display:block}.contact-box .button{margin-top:23px}.contact-box h2{font-size:28px}.footer-row{display:block}.footer-row span{display:block;margin-top:6px}.case-hero{padding:30px 0 35px}.back{margin-bottom:30px}.case-heading h1{font-size:40px}.case-heading>p{font-size:16px}.case-meta{gap:17px;grid-template-columns:1fr}.case-meta>div{display:grid;grid-template-columns:85px 1fr}.case-meta dt{margin:2px 0}.case-visual{padding:15px;border-radius:13px}.case-body{display:block;padding-top:35px}.case-nav{display:flex;position:static;overflow-x:auto;white-space:nowrap;gap:22px;padding-bottom:20px;margin-bottom:30px;border-bottom:1px solid var(--line)}.case-section h2{font-size:26px}.case-section{padding-bottom:30px;margin-bottom:30px}.metric-grid{gap:8px}.metric{padding:13px 10px}.metric strong{font-size:25px}.metric span{font-size:10px}.evidence-links{grid-template-columns:1fr}.next-project a{font-size:17px}.data-table{font-size:12px}.data-table th,.data-table td{padding:11px 8px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
+
+/* Theme control stays visible when the mobile navigation is collapsed. */
+.brand{order:1}.nav-links{order:2;margin-left:auto}.menu-toggle{order:4}
+.theme-toggle{order:3;flex-shrink:0;display:inline-flex;align-items:center;gap:7px;padding:8px 13px;border:1px solid var(--line);border-radius:100px;background:transparent;color:var(--ink);cursor:pointer;font-size:12px;line-height:1.5}
+.theme-toggle [aria-hidden]{font-size:18px;line-height:1}.theme-toggle:hover{border-color:var(--ink)}
+html[data-theme="dark"]{color-scheme:dark;--ink:#e7ece8;--paper:#101820;--white:#17232c;--muted:#aab7b4;--line:#35434b;--green:#9ccba9}
+html[data-theme="dark"] .site-header{background:rgba(16,24,32,.97)}
+html[data-theme="dark"] .hero h1 .soft{color:#b4c0bb}
+html[data-theme="dark"] .button.primary{background:var(--amber);color:#101e2c;border-color:var(--amber)}
+html[data-theme="dark"] .button.primary:hover{background:#ffda79}
+html[data-theme="dark"] .hero-board{background:#182a37;box-shadow:12px 14px 0 #0a1117}
+html[data-theme="dark"] .brand-mark{border:1px solid #43535d}
+html[data-theme="dark"] .project-card,html[data-theme="dark"] .evidence-link{background:#17232c}
+html[data-theme="dark"] .card-visual,html[data-theme="dark"] .case-visual{background:#25342f}
+html[data-theme="dark"] .card-visual.municipal,html[data-theme="dark"] .case-visual.chart{background:#34362b}
+html[data-theme="dark"] .visual-index{color:#d2ded4}
+html[data-theme="dark"] .decision{background:#21372f}
+html[data-theme="dark"] .case-note{background:#2d332e}
+html[data-theme="dark"] a:focus-visible,html[data-theme="dark"] button:focus-visible{outline-color:var(--amber)}
+@media(max-width:720px){.nav{gap:10px}.theme-toggle{order:2;margin-left:auto;padding:7px 10px}.menu-toggle{order:3}.nav-links{order:4}.brand{gap:8px}html[data-theme="dark"] .hero-board{box-shadow:7px 8px 0 #0a1117}}

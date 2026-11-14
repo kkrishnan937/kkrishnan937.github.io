@@ -21,3 +21,20 @@ if (toggle && nav) {
     }
   });
 }
+
+const themeButton = document.querySelector('.theme-toggle');
+if (themeButton) {
+  const updateTheme = dark => {
+    document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+    themeButton.setAttribute('aria-pressed', String(dark));
+    themeButton.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+    themeButton.querySelector('.theme-label').textContent = dark ? 'Light' : 'Dark';
+    themeButton.querySelector('[aria-hidden]').textContent = dark ? '☀' : '☾';
+  };
+  updateTheme(document.documentElement.dataset.theme === 'dark');
+  themeButton.addEventListener('click', () => {
+    const dark = document.documentElement.dataset.theme !== 'dark';
+    updateTheme(dark);
+    try { localStorage.setItem('portfolio-theme', dark ? 'dark' : 'light'); } catch { /* Theme still works when storage is unavailable. */ }
+  });
+}
